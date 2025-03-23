@@ -1,25 +1,159 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-  <head>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png?">
+<html lang="zh-CN">
+<head>
+    <!--
+        ============================================
+        HTML页面UI美化代码
+        通过注释学习页面美化技巧
+        ============================================
+    -->
+
+    <!--
+        1. 设置字符编码和视口
+        -------------------------
+        - <meta charset="UTF-8">：设置页面字符编码为UTF-8，支持中文。
+        - <meta name="viewport" content="width=device-width, initial-scale=1.0">：
+          确保页面在移动设备上正确显示。
+    -->
     <meta charset="UTF-8">
-    <title>欢迎来到MCSCI我的世界互通服务器官方网站！</title>
-  </head>
-  <body>
-    <main>
-    	<h1>欢迎来到MCSCI我的世界互通服务器官方网站！</h1>
-    	<h2>服务器延迟稳定，非常适合生电机器的搭建。</h2>
-    	<h3>服务器ip mcsci.cn 端口 27107</h3>
-    	<h4>服务器使用geyser与水龙头端互通服务器</h4>
-      <h3>服务器吉祥物是李硕（doge）</h3>
-    		<h5>服务器官方QQ交流群 <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=KFzZF9Z4Zcp6Q30b5nZDfO92PA_CQSA3&authKey=K0JiEFr8BtqqcsJY33IBn75nB0DX7IaSgzkS%2F%2Bks7GzMhwQ3C9am01iZ6DVFe5Uc&noverify=0&group_code=541524170" target="_blank">541524170</a></h4>
-    		<h4>服主邮箱 CinderyBell6765@gmail.com</h4>
-          <h3>服主B站主页<a href="https://b23.tv/fmeZhfM" target="_blank">BILIBILI</a></h3>
-    		<h3>MINEBBS帖子 <a href="https://minebbs.com/threads/mcsci.30158/" target="_blank">点我转到MINEBBS论坛帖子</a>
-          <h3>MCSCIBBS我的世界交流论坛 <a href="https://bbs.mcsci.cn" target="_blank">点我转到MCSCIBBS我的世界交流论坛</a>
-          <h3>服主的github主页 <a href="https://github.com/qpalzm919288383929" target="_blank">点我转到服主github主页</a>
-    			<h5>ⒸMCSCI服务器官方网站 2022-2024 Power by <a href="https://pages.github.com/" target="_blank">github pages</h5>
-            <img src="picture.png" width="300" height="300">
-    		</main>
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        2. 页面标题
+        -------------------------
+        <title>：定义页面的标题，显示在浏览器标签栏中。
+    -->
+    <title> 欢迎来到MCSCI我的世界互通服务器官方网站！ </title>
+
+    <!--
+        3. 引入外部样式表
+        -------------------------
+        <link>：引入外部CSS文件，用于美化页面。
+    -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--
+        4. 内嵌CSS样式
+        -------------------------
+        <style>：在HTML文件中直接编写CSS样式。
+    -->
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Arial', sans-serif; /* 设置字体 */
+            margin: 0; /* 去除默认外边距 */
+            padding: 0; /* 去除默认内边距 */
+            background-color: #f4f4f9; /* 设置背景颜色 */
+            color: #333; /* 设置文字颜色 */
+        }
+
+        /* 容器样式 */
+        .container {
+            max-width: 1200px; /* 设置最大宽度 */
+            margin: 0 auto; /* 水平居中 */
+            padding: 20px; /* 内边距 */
+        }
+
+        /* 标题样式 */
+        h1 {
+            text-align: center; /* 文字居中 */
+            color: #4a90e2; /* 文字颜色 */
+            font-size: 2.5rem; /* 字体大小 */
+            margin-bottom: 20px; /* 下边距 */
+        }
+
+        /* 卡片样式 */
+        .card {
+            background-color: #fff; /* 背景颜色 */
+            border-radius: 10px; /* 圆角 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影 */
+            padding: 20px; /* 内边距 */
+            margin-bottom: 20px; /* 下边距 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 过渡效果 */
+        }
+
+        /* 卡片悬停效果 */
+        .card:hover {
+            transform: translateY(-5px); /* 向上移动 */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 阴影加深 */
+        }
+
+        /* 按钮样式 */
+        .btn {
+            display: inline-block; /* 行内块元素 */
+            padding: 10px 20px; /* 内边距 */
+            background-color: #4a90e2; /* 背景颜色 */
+            color: #fff; /* 文字颜色 */
+            border-radius: 5px; /* 圆角 */
+            text-decoration: none; /* 去除下划线 */
+            transition: background-color 0.3s ease; /* 过渡效果 */
+        }
+
+        /* 按钮悬停效果 */
+        .btn:hover {
+            background-color: #357abd; /* 背景颜色加深 */
+        }
+
+        /* 表单样式 */
+        .form-group {
+            margin-bottom: 15px; /* 下边距 */
+        }
+
+        .form-group label {
+            display: block; /* 块级元素 */
+            margin-bottom: 5px; /* 下边距 */
+            font-weight: bold; /* 字体加粗 */
+        }
+
+        .form-group input {
+            width: 100%; /* 宽度100% */
+            padding: 10px; /* 内边距 */
+            border: 1px solid #ccc; /* 边框 */
+            border-radius: 5px; /* 圆角 */
+        }
+
+        /* 页脚样式 */
+        footer {
+            text-align: center; /* 文字居中 */
+            padding: 20px; /* 内边距 */
+            background-color: #333; /* 背景颜色 */
+            color: #fff; /* 文字颜色 */
+            margin-top: 40px; /* 上边距 */
+        }
+    </style>
+</head>
+<body>
+    <!--
+        5. 页面结构
+        -------------------------
+        - <header>：页面头部。
+        - <main>：页面主要内容。
+        - <footer>：页面底部。
+    -->
+    <div class="container">
+        <!-- 头部 -->
+        <header>
+            <h1> 欢迎来到MCSCI我的世界互通服务器官方网站！</h1>
+        </header>
+
+        <!-- 主要内容 -->
+        <main>
+            <!-- 卡片1 -->
+            <div class="card">
+                <p> 服务器延迟稳定，非常适合生电机器的搭建。 </p>
+                <p> 服务器使用geyser与水龙头端互通服务器</p>
+                <p> 服务器吉祥物是李硕（doge）</p>
+                <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=KFzZF9Z4Zcp6Q30b5nZDfO92PA_CQSA3&authKey=K0JiEFr8BtqqcsJY33IBn75nB0DX7IaSgzkS%2F%2Bks7GzMhwQ3C9am01iZ6DVFe5Uc&noverify=0&group_code=541524170">服务器官方QQ交流群</a>
+                 <p> 服主邮箱 CinderyBell6765@gmail.com</p>
+                 <a href="https://b23.tv/fmeZhfM">服主B站主页</a>
+                 <a href="https://minebbs.com/threads/mcsci.30158/">MINEBBS帖子</a>
+                 <a href="https://bbs.mcsci.cn/">MCSCIBBS我的世界交流论坛</a>
+                 <a href="https://github.com/qpalzm919288383929"> 点我转到服主github主页 </a>
+            </div>
+        <footer>
+            <p> ⒸMCSCI服务器官方网站 2022-2025</p>
+            <a href="https://pages.github.com/"> Power by github pages </a>
+        </footer>
+    </div>
+</body>
 </html>
